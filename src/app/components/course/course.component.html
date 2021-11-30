@@ -1,0 +1,26 @@
+<div class="course">
+    <!-- <div class="course_image"><img src="assets/images/course_1.jpg" alt=""></div> -->
+    <div class="course_image"><img [src]="courseInput?.image" width="400px" height="250px" alt=""></div>
+    <div class="course_body">
+        <h3 class="course_title"><a (click)='goToInfo(courseInput?._id)'>{{courseInput?.name}}</a></h3>
+        <div class="course_teacher">{{courseInput?.trainerName}}</div>
+        <div class="course_text">
+            <p>{{courseInput?.description}}</p>
+        </div>
+    </div>
+    <div class="course_footer">
+        <div class="course_footer_content d-flex flex-row align-items-center justify-content-start">
+            <div class="course_info">
+                <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                <span>{{courseInput?.capacity}} {{countStudents(courseInput?.capacity)}}</span>
+                <!-- <span *ngIf='courseInput.capacity >=2'>{{courseInput.capacity}} students</span>
+                <span *ngIf='courseInput.capacity <= 1'>{{courseInput.capacity}} student</span> -->
+            </div>
+            <div class="course_info">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <span>{{courseInput?.startAt}}</span>
+            </div>
+            <div class="course_price ml-auto">{{courseInput?.price}}</div>
+        </div>
+    </div>
+</div>

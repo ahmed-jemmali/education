@@ -1,0 +1,27 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="comment-form-wrap pt-5">
+                <h3 class="mb-5">Login</h3>
+                <form action="#" class="p-5 bg-light" #loginForm="ngForm" (ngSubmit)='login()'>
+
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" class="form-control" id="email" [(ngModel)]="user.email"  [ngModelOptions]="{standalone: true}" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pass">Password* </label>
+                        <input type="password" id="pass" name="password" [(ngModel)]="user.pwd"  [ngModelOptions]="{standalone: true}" required>
+                    </div>
+                    <span id ="msgError"></span>
+                    <div class="form-group">
+                        <button type="submit" value="login" class="btn btn-primary py-3 px-4 text-white">login</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

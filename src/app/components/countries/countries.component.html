@@ -1,0 +1,11 @@
+<table style="margin-top: 200px;">
+    <tr>
+        <td>Name</td>
+        <td>Logo</td>
+    </tr>
+    <tr *ngFor="let c of countries">
+        <td>{{c.name}}</td>
+        <td><img [src]="c.logo" height="100px" width="100px" alt=""></td>
+    </tr>
+
+</table>
